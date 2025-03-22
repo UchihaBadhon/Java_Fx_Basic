@@ -1,0 +1,18 @@
+//for root part
+.root{
+-fx-background-color: rgb(6, 5, 26);
+}
+
+//for style the entire class
+.label{
+-fx-font-size: 20;
+-fx-text-fill: white;
+-fx-alignment: center;
+}
+
+//for styling the particular id
+#NormalText{
+-fx-font-size: 50;
+-fx-font-family: "Lucida Console";
+-fx-font-color: white;
+}
