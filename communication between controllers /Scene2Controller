@@ -34,9 +34,9 @@ public class Scene2Controller {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene1.fxml"));
             root = loader.load();
             stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-
+Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
-            stage.setScene(new Scene(root));
+            stage.setScene(scene);
             stage.show();
         } catch( IOException ex ){
             ex.printStackTrace();
