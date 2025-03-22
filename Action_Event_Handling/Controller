@@ -1,0 +1,34 @@
+package org.example.simplefx;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.shape.Circle;
+
+
+
+public class HelloController {
+
+    @FXML // This annotation will load the FXML Loader and inject into fxml file
+    private Circle circle;
+    private double x;
+    private double y;
+
+    public void up(ActionEvent e ){
+        //System.out.println("UP");
+        circle.setCenterY(y-=5);
+    }
+    public void down(ActionEvent e ){
+        //System.out.println("Down");
+        circle.setCenterY(y+=5); //this is the weird part because of Y axis. Here it will be opposite from real life
+    }
+    public void right(ActionEvent e ){
+        //System.out.println("Right");
+        circle.setCenterX(x+=5);
+    }
+    public void left(ActionEvent e ){
+        //System.out.println("Left");
+        circle.setCenterX(x-=5);
+    }
+
+}
