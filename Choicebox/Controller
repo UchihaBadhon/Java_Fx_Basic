@@ -1,0 +1,44 @@
+package org.example.simplefx;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+
+public class Scene1Controller implements Initializable {
+
+@FXML
+private Label UpdateLabel;
+
+@FXML
+private ChoiceBox<String> choiceBox;
+
+
+//Choicbox items need to stored manually and as it doesnt have any on action class so we need to seperately declare a method and link it
+    private String[] food = {"pizza", "Roll", "Sushi"};
+
+
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        choiceBox.getItems().addAll(food);
+        choiceBox.setOnAction(this::getfood); // this is to link to getfood method
+    }
+
+    public void getfood( ActionEvent event ){
+        String myfood = choiceBox.getValue();
+        UpdateLabel.setText(myfood);
+    }
+
+
+}
+
