@@ -1,0 +1,42 @@
+package org.example.simplefx;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.io.IOException;
+
+
+public class Scene1Controller {
+
+@FXML
+private Label UpdateLabel;
+@FXML
+private ImageView imageUpdate;
+@FXML
+private CheckBox lightcheck;
+
+   Image image1 = new Image(getClass().getResourceAsStream("/images/lightoff.jpg"));
+    Image image2 = new Image(getClass().getResourceAsStream("/images/lighton.jpg"));
+
+
+    public void check( ActionEvent e ) throws IOException{
+
+
+         if( lightcheck.isSelected()){
+             UpdateLabel.setText("ON");
+             imageUpdate.setImage(image2);
+         }
+         else{
+             UpdateLabel.setText("OFF");
+             imageUpdate.setImage(image1);
+         }
+
+
+
+        }
+        }
+
