@@ -1,0 +1,42 @@
+package org.example.simplefx;
+
+import javafx.animation.TranslateTransition;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.transform.Translate;
+import javafx.util.Duration;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+import java.util.Scanner;
+
+
+public class Scene1Controller implements Initializable{
+@FXML
+private ListView<String> listView;
+@FXML
+private ImageView myImage;
+
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        TranslateTransition translete = new TranslateTransition();
+        translete.setNode(myImage);
+        translete.setDuration(Duration.millis(2000));
+        translete.setCycleCount(TranslateTransition.INDEFINITE);
+        translete.setAutoReverse(true);
+
+        translete.setByX(270);
+        translete.play();
+    }
+}
+
