@@ -26,6 +26,7 @@ String myfood;
     public void initialize(URL arg0, ResourceBundle arg1) {
 
         listView.getItems().addAll(food);
+//listener is used to update the label when it is clicked in into the listview.
         listView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String arg1, String arg2) {
